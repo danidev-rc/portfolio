@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { FiHome } from "react-icons/fi";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,34 +42,54 @@ export default function Navbar() {
           <h1>Logo</h1>
         </div>
         <div>
-          <nav className='flex text-lg gap-6'>
+          <nav className='flex text-lg gap-6 items-center font-semibold'>
             <Link
               to='/'
-              className='hover:text-indigo-600 transition-colors duration-300'
+              className={`${
+                theme === "light"
+                  ? "text-black hover:text-blue-600"
+                  : "text-white hover:text-indigo-600"
+              } transition-colors duration-300`}
             >
-              Home
-            </Link>
-            <Link
-              to='/about'
-              className='hover:text-indigo-600 transition-colors duration-300'
-            >
-              About
+              <FiHome className='text-xl hover:transition-transform hover:scale-110 transform origin-center transition-transform duration-500 ease-in-out' />
             </Link>
             <Link
               to='/projects'
-              className='hover:text-indigo-600 transition-colors duration-300'
+              className={`${
+                theme === "light"
+                  ? "text-black hover:text-blue-600"
+                  : "text-white hover:text-indigo-600"
+              } transition-colors duration-300`}
+            >
+              Experiencia
+            </Link>
+            <Link
+              to='/projects'
+              className={`${
+                theme === "light"
+                  ? "text-black hover:text-blue-600"
+                  : "text-white hover:text-indigo-600"
+              } transition-colors duration-300`}
             >
               Projects
             </Link>
             <Link
               to='/contact'
-              className='hover:text-indigo-600 transition-colors duration-300'
+              className={`${
+                theme === "light"
+                  ? "text-black hover:text-blue-600"
+                  : "text-white hover:text-indigo-600"
+              } transition-colors duration-300`}
             >
               Contact
             </Link>
             <Link
               to='/blog'
-              className='hover:text-indigo-600 transition-colors duration-300'
+              className={`${
+                theme === "light"
+                  ? "text-black hover:text-blue-600"
+                  : "text-white hover:text-indigo-600"
+              } transition-colors duration-300`}
             >
               Blog
             </Link>
@@ -77,12 +98,12 @@ export default function Navbar() {
         <div className='text-lg font-bold'>
           <button
             onClick={toggleTheme}
-            className='p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors duration-300'
+            className='p-2 rounded-full hover:transition-transform hover:scale-110 transform origin-center transition-transform duration-500 ease-in-out'
           >
             {theme === "light" ? (
-              <FaMoon className='text-indigo-600' />
+              <FaMoon className='text-black' />
             ) : (
-              <FaSun className='text-yellow-500' />
+              <FaSun className='text-white' />
             )}
           </button>
         </div>

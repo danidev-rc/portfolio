@@ -8,11 +8,13 @@
 }
 
 [data-theme='dark'] {
-  --bg-color: black;
+  --bg-color: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
   --text-color: white;
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color) no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
 }
