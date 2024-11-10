@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FiGithub } from "react-icons/fi";
 import { FaEye } from "react-icons/fa";
 
@@ -14,7 +15,7 @@ export default function Card({
       <img
         src={image}
         alt={title}
-        className='w-64 h-52 object-cover rounded-lg mr-4 shadow-lg transition-transform duration-500 hover:scale-105'
+        className='w-64 h-52 object-cover rounded-lg mr-4 shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl'
       />
       <div className='flex flex-col justify-between'>
         <div className='flex flex-col justify-between w-full'>
@@ -23,7 +24,7 @@ export default function Card({
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className='flex items-center gap-1 text-white text-sm font-semibold px-2 py-1 rounded-full'
+                className='flex items-center gap-1 text-white text-sm font-semibold px-2 py-1 rounded-full cursor-pointer'
                 style={{ backgroundColor: tag.background }}
               >
                 {tag.icon}
