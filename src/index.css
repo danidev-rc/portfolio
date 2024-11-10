@@ -7,14 +7,20 @@
   --text-color: black;
 }
 
+[data-theme='light'] {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #4f46e5;
+}
+
 [data-theme='dark'] {
   --bg-color: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
   --text-color: white;
+  --primary-color: #4f46e5;
 }
 
 body {
   background: var(--bg-color) no-repeat center center fixed;
-  background-size: cover;
   color: var(--text-color);
   transition: background 0.5s ease, color 0.5s ease;
 }

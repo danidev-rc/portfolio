@@ -54,7 +54,7 @@ export default function Navbar() {
               <FiHome className='text-xl hover:transition-transform hover:scale-110 transform origin-center transition-transform duration-500 ease-in-out' />
             </Link>
             <Link
-              to='/projects'
+              to='/'
               className={`${
                 theme === "light"
                   ? "text-black hover:text-blue-600"
@@ -64,7 +64,7 @@ export default function Navbar() {
               Experiencia
             </Link>
             <Link
-              to='/projects'
+              to='/'
               className={`${
                 theme === "light"
                   ? "text-black hover:text-blue-600"
@@ -74,7 +74,7 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
-              to='/contact'
+              to='/'
               className={`${
                 theme === "light"
                   ? "text-black hover:text-blue-600"
@@ -84,7 +84,7 @@ export default function Navbar() {
               Contact
             </Link>
             <Link
-              to='/blog'
+              to='/'
               className={`${
                 theme === "light"
                   ? "text-black hover:text-blue-600"
