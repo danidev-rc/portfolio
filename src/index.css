@@ -5,6 +5,7 @@
 :root {
   --bg-color: white;
   --text-color: black;
+  --primary-color: #4f46e5;
 }
 
 [data-theme='light'] {
