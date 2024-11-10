@@ -98,7 +98,7 @@ export default function Navbar() {
               </button>
             </Link>
             <Link
-              to='/'
+              to='/blog'
               className={`${
                 theme === "light"
                   ? "text-white hover:text-blue-600"

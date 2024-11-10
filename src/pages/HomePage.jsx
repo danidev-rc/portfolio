@@ -1,24 +1,23 @@
-import { FiMail } from "react-icons/fi";
-import { MdOutlineWorkOutline } from "react-icons/md";
 import {
+  FiMail,
+  MdOutlineWorkOutline,
   FaCodeBranch,
   FaHtml5,
   FaCss3Alt,
   FaJsSquare,
   FaReact,
   FaNodeJs,
-} from "react-icons/fa";
-import { DiDjango } from "react-icons/di";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { RiSupabaseFill } from "react-icons/ri";
-import { SiExpress } from "react-icons/si";
-import { CiLinkedin } from "react-icons/ci";
+  DiDjango,
+  BiLogoPostgresql,
+  RiSupabaseFill,
+  SiExpress,
+  CiLinkedin,
+} from "../assets/icons";
 
-import Button from "../components/Button";
-import Card from "../components/Card";
+import { Button, Card } from "../components";
+import { bestMovie, biblioteca, inventory } from "../assets/images/images";
 
-import bestMovie from "../assets/best_movie.png";
-import biblioteca from "../assets/biblioteca.png";
+import "@fontsource-variable/onest";
 
 export default function HomePage() {
   return (
@@ -27,31 +26,42 @@ export default function HomePage() {
         id='home'
         className='section py-12 md:py-32 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl'
       >
-        <div className='max-w-xl'>
-          <h1 className='text-4xl font-bold tracking-tight sm:text-5xl'>
-            Hola, soy Dante Rodríguez
-          </h1>
-          <p className='mt-4'>
-            Técnico en{" "}
-            <strong className='text-[var(--primary-color)]'>
-              Diseño y Desarrollo de Software
-            </strong>
-            , con experiencia en el desarrollo de aplicaciones web. Me encanta
-            aprender nuevas tecnologías y compartir mis conocimientos con la
-            comunidad.
-          </p>
-          <nav className='flex flex-wrap gap-4 mt-8'>
-            <Button
-              icon={<FiMail className='text-xl' />}
-              text='Email'
-              link=''
-            />
-            <Button
-              icon={<CiLinkedin className='text-xl' />}
-              text='LinkedIn'
-              link='https://www.linkedin.com/in/dante-samuel-rodriguez-chambi-444041279/'
-            />
-          </nav>
+        <div className='flex w-full gap-14 items-center'>
+          <div className='max-w-xl '>
+            <h1 className='text-4xl font-bold tracking-tight sm:text-5xl'>
+              Hola, soy Dante Rodríguez
+            </h1>
+            <div>
+              <p className='mt-8 text-xl md:text-lg'>
+                Técnico en{" "}
+                <strong className='text-[var(--primary-color)]'>
+                  Diseño y Desarrollo de Software
+                </strong>
+                , con experiencia en el desarrollo de aplicaciones web. Me
+                encanta aprender nuevas tecnologías y compartir mis
+                conocimientos con la comunidad. Actualmente estoy en busca de un
+                trabajo como desarrollador web, donde pueda seguir aprendiendo y
+                creciendo profesionalmente.
+              </p>
+              <nav className='flex flex-wrap gap-4 mt-8'>
+                <Button
+                  icon={<FiMail className='text-xl' />}
+                  text='Email'
+                  link=''
+                />
+                <Button
+                  icon={<CiLinkedin className='text-xl' />}
+                  text='LinkedIn'
+                  link='https://www.linkedin.com/in/dante-samuel-rodriguez-chambi-444041279/'
+                />
+              </nav>
+            </div>
+          </div>
+          <img
+            src='https://avatars.githubusercontent.com/u/89816411?v=4'
+            alt='Dante Rodríguez'
+            className='w-60 h-60 rounded-full mt-8'
+          />
         </div>
       </section>
       <div className='py-16'>
@@ -101,7 +111,7 @@ export default function HomePage() {
         >
           <h2 className='flex items-center mb-6 text-3xl font-semibold gap-x-3'>
             <FaCodeBranch className='hover:transform hover:scale-110 transform origin-center transition-transform duration-500 ease-in-out cursor-pointer' />
-            Proyectos
+            Proyectos Principales
           </h2>
           <div>
             <Card
@@ -125,7 +135,8 @@ export default function HomePage() {
                 },
               ]}
               image={bestMovie}
-              link='https://github.com/danidev-rc/best-movie.git'
+              code='https://github.com/danidev-rc/best-movie.git'
+              preview='https://danidev-rc.github.io/best-movie/'
             />
             <Card
               title='Django-based API.'
@@ -148,7 +159,8 @@ export default function HomePage() {
                 },
               ]}
               image={biblioteca}
-              link='https://github.com/danidev-rc/Biblioteca-Django.git'
+              code='https://github.com/danidev-rc/Biblioteca-Django.git'
+              preview='https://biblioteca-django.herokuapp.com/'
             />
             <Card
               title='Inventory Manager.'
@@ -180,8 +192,9 @@ export default function HomePage() {
                   background: "#0633e8",
                 },
               ]}
-              image={biblioteca}
-              link='https://github.com/danidev-rc/gestor-inventario.git'
+              image={inventory}
+              code='https://github.com/danidev-rc/gestor-inventario.git'
+              preview='https://gestor-inventario.vercel.app/'
             />
           </div>
         </section>
